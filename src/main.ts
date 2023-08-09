@@ -5,7 +5,6 @@ let outputtedText = document.querySelector("#output-box") as HTMLElement;
 const transBtn = document.querySelector("#translate-btn") as HTMLButtonElement;
 let inputtedText = document.querySelector("#input-box") as HTMLInputElement;
 
-console.log(outputtedText.textContent);
 //function to handle translation
 
 const handleTranslateToMorseCode = (event: Event) => {
