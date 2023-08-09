@@ -1,5 +1,6 @@
+import "./style.scss";
 import { handleTranslateToMorseCode } from "./functions";
-import "../";
+
 //Query Selectors
 export let outputtedText = document.querySelector("#output-box") as HTMLElement;
 const transBtn = document.querySelector("#translate-btn") as HTMLButtonElement;
