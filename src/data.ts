@@ -2,7 +2,7 @@ type MorseCode = {
   [letter: string]: string;
 };
 
-const morseCodeObject: MorseCode = {
+export const morseCodeObject: MorseCode = {
   A: ".-",
   B: "-...",
   C: "-.-.",
