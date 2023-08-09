@@ -5,32 +5,23 @@ let outputtedText = document.querySelector("#output-box") as HTMLElement;
 const transBtn = document.querySelector("#translate-btn") as HTMLButtonElement;
 let inputtedText = document.querySelector("#input-box") as HTMLInputElement;
 
-console.log(inputtedText);
+console.log(outputtedText.textContent);
 //function to handle translation
 
-// let inputtedTextCont = inputtedText.textContent;
-
 const handleTranslateToMorseCode = (event: Event) => {
-  console.log(inputtedText.value);
-  inputtedText.value
-    .toUpperCase()
+  const inputtedString = inputtedText.value.toUpperCase();
+  const translatedCharacters = inputtedString
     .split("")
     .map((char) => {
       if (morseCodeObject[char]) {
         return morseCodeObject[char];
       }
-      return "";
     })
     .join(" ");
-  return inputtedText.value;
 
-  // outputtedText.textContent = inputtedTextCont;
+  outputtedText.textContent = translatedCharacters;
 };
 
 //event listener
 
 transBtn.addEventListener("click", handleTranslateToMorseCode);
-
-//SEPERATE WORD TO INDIVIDUAL CHARACTERS
-// CAPITALISE THE CHARACTER
-// MAP OVER CHARACTERS
