@@ -13,5 +13,7 @@ export const handleTranslateToMorseCode = (event: Event) => {
     })
     .join(" ");
 
+  console.log(event);
+
   outputtedText.textContent = translatedCharacters;
 };
